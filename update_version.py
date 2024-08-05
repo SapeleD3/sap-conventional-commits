@@ -2,7 +2,7 @@
 import subprocess
 
 def get_latest_version():
-    result = subprocess.run(['cz', 'version'], capture_output=True, text=True)
+    result = subprocess.run(['cz', 'version', "-p"], capture_output=True, text=True)
     return result.stdout.strip()
 
 def update_version_file(version):
