@@ -18,3 +18,8 @@ repos:
     entry: python update_version.py
     language: python
     stages: [post-commit]
+- repo: https://github.com/pycqa/flake8
+  rev: 7.0.0
+  hooks:
+  - id: flake8
+    stages: ['commit']
