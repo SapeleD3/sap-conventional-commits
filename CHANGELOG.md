@@ -1,3 +1,11 @@
+## 0.2.1 (2024-08-05)
+
+### Fix
+
+- create version file
+- saved the commit
+- store version number
+
 ## 0.2.0 (2024-08-05)
 
 ### Feat
