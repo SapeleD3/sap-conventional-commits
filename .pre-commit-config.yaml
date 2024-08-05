@@ -11,3 +11,10 @@ repos:
   hooks:
   - id: commitizen
     stages: [commit-msg]
+- repo: local
+  hooks:
+  - id: update-version-file
+    name: Update Version file
+    entry: python update_version.py
+    language: python
+    stages: [post-commit]
