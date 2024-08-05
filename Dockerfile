@@ -7,11 +7,15 @@ ENV PYTHONUNBUFFERED 1
 
 # Set the working directory
 WORKDIR /app
-COPY . /app/
 
 # install dependencies
+COPY requirements.txt /app/
 RUN pip install -U pip
 RUN --mount=type=cache,target=/root/.cache \
     pip install -r requirements.txt
 
-RUN fastapi run main.py
+COPY . /app/
+
+EXPOSE 8000
+
+CMD ["python3", "-m", "fastapi", "run", "main.py"]
